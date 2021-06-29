@@ -1,6 +1,8 @@
 const canvas = document.getElementById("jsCanvas");
 const ctx = canvas.getContext("2d");
 
+const	colors = document.getElementsByClassName("controls__color");
+// console.log(Array.from(colors));
 
 // pixcel modifier에 사이즈 지정
 canvas.width = 700;
@@ -50,3 +52,10 @@ if (canvas) {
 	canvas.addEventListener("mouseup", onMouseUp);
 	canvas.addEventListener("mouseleave", onMouseLeave);
 }
+
+function handleColorClick(event) {
+	// console.log(event.target.style.backgroundColor);
+	ctx.strokeStyle = event.target.style.backgroundColor;
+}
+
+Array.from(colors).forEach(color => color.addEventListener("click", handleColorClick));
