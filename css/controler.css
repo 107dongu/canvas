@@ -1,0 +1,14 @@
+@import "button.css";
+@import "sampleColor.css";
+
+.controls {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.controls__range {
+    margin-bottom: 30px;
+}
